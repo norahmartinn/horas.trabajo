@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cuánto tiempo te cuesta?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="salary-container">
+        <h1>Configuración de Salario</h1>
+        <div class="input-group">
+            <label for="salary-amount">¿Cuál es tu salario?</label>
+            <input type="number" id="salary-amount" placeholder="Ej. 25000">
+        </div>
+        <div class="input-group">
+            <label>Periodo:</label>
+            <div class="radio-group">
+                <input type="radio" id="monthly" name="period" value="monthly" checked>
+                <label for="monthly">Mensual</label>
+                <input type="radio" id="yearly" name="period" value="yearly">
+                <label for="yearly">Anual</label>
+            </div>
+        </div>
+        <button id="save-salary">Guardar Salario</button>
+    </div>
+
+    <div class="container" id="cost-container" style="display: none;">
+        <h1>¿Cuánto cuesta lo que quieres comprar?</h1>
+        <div class="input-group">
+            <input type="number" id="item-cost" placeholder="Ej. 500">
+            <button id="calculate">Calcular</button>
+        </div>
+        <div id="result"></div>
+        <button id="change-salary">Cambiar Salario</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
