@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Cuánto tiempo te cuesta?</title>
+    <title>Calculadora de Tiempo de Trabajo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
         <h1>Configuración de Salario</h1>
         <div class="input-group">
             <label for="salary-amount">¿Cuál es tu salario?</label>
-            <input type="number" id="salary-amount" placeholder="Ej. 25000">
+            <input type="number" id="salary-amount" placeholder="Ej. 25000" min="1">
         </div>
         <div class="input-group">
             <label>Periodo:</label>
@@ -22,17 +22,25 @@
                 <label for="yearly">Anual</label>
             </div>
         </div>
-        <button id="save-salary">Guardar Salario</button>
+        <div class="input-group">
+            <label for="daily-hours">¿Cuántas horas trabajas por día?</label>
+            <input type="number" id="daily-hours" placeholder="Ej. 8" min="1" max="24" value="8">
+        </div>
+        <div class="input-group">
+            <label for="weekly-days">¿Cuántos días trabajas por semana?</label>
+            <input type="number" id="weekly-days" placeholder="Ej. 5" min="1" max="7" value="5">
+        </div>
+        <button id="save-salary">Guardar Configuración</button>
     </div>
 
     <div class="container" id="cost-container" style="display: none;">
         <h1>¿Cuánto cuesta lo que quieres comprar?</h1>
         <div class="input-group">
-            <input type="number" id="item-cost" placeholder="Ej. 500">
+            <input type="number" id="item-cost" placeholder="Ej. 500" min="0.01" step="0.01">
             <button id="calculate">Calcular</button>
         </div>
         <div id="result"></div>
-        <button id="change-salary">Cambiar Salario</button>
+        <button id="change-salary">Cambiar Configuración</button>
     </div>
 
     <script src="script.js"></script>
